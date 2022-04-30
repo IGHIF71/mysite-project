@@ -31,7 +31,8 @@ DEBUG = config('DEBUG')
 ALLOWED_HOSTS = ['portfoliokjr.herokuapp.com']
 
 
-# Application definition
+CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE')
+SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'jobs',
 ]
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
