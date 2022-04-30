@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['portfoliokjr.herokuapp.com']
 CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE')
 SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE')
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
