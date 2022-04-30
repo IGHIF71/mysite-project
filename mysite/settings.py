@@ -23,16 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ENV['SECRET_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = ENV['DEBUG']
+
 
 ALLOWED_HOSTS = ['portfoliokjr.herokuapp.com']
 
 
-CSRF_COOKIE_SECURE = ENV['CSRF_COOKIE_SECURE']
-SESSION_COOKIE_SECURE = ENV['SESSION_COOKIE_SECURE']
+
 
 
 INSTALLED_APPS = [
@@ -78,8 +77,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
